@@ -11,6 +11,9 @@ Construir una aplicacion funcional en pocos minutos usando componentes nativos d
 - **Interpolacion**: permite mostrar valores de TypeScript en el HTML usando `{{ }}`.
 - **Componentes Standalone**: cada componente de Ionic usado en el HTML se importa directamente en el archivo `.ts`.
 
+- <img width="959" height="470" alt="image" src="https://github.com/user-attachments/assets/f4fb43e2-7a88-43ae-9227-82bb6472f3de" />
+
+
 ## Tecnologias utilizadas
 
 - Node.js
