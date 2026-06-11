@@ -1,20 +1,43 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Mood Tracker Express</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <main class="tracker">
+    <ion-card [color]="colorFondo" class="mood-card ion-text-center">
+      <div class="emoji" aria-live="polite">{{ emojiActual }}</div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+      <ion-card-content>
+        <h2>{{ mensajeActual }}</h2>
+      </ion-card-content>
+    </ion-card>
+
+    <section class="actions" aria-label="Opciones de estado de ánimo">
+      <ion-button
+        expand="block"
+        color="success"
+        (click)="cambiarEstado('😎', '¡Excelente! Sigue rompiéndola en clase.', 'success')"
+      >
+        ¡Feliz / Motivado!
+      </ion-button>
+
+      <ion-button
+        expand="block"
+        color="warning"
+        (click)="cambiarEstado('🤯', 'Respira hondo, inhala, exhala. ¡Tú puedes!', 'warning')"
+      >
+        ¡Estresado!
+      </ion-button>
+
+      <ion-button
+        expand="block"
+        color="danger"
+        (click)="cambiarEstado('😴', 'Ya casi termina la jornada, ve por un café.', 'danger')"
+      >
+        ¡Con Sueño!
+      </ion-button>
+    </section>
+  </main>
 </ion-content>
